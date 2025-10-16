@@ -7,10 +7,15 @@ package edu.ucaldas.structural;
 public abstract class NotifierDecorator implements Notifier {
     // TODO: agrega el atributo y constructor.
 
+    Notifier notifier;
+
+    public NotifierDecorator(Notifier notifier) {
+        this.notifier = notifier;
+    }
+
     @Override
     public String send(String message) {
-        // TODO: delegar la llamada al objeto envuelto.
-        return null;
+        return notifier.send(message);
     }
 }
 

@@ -8,7 +8,13 @@ package edu.ucaldas.creational;
 
 public class ShapeFactory {
     public Shape createShape(String type) {
-        // TODO: completa la lógica de creación
+        if(type.equals("Circle")){
+            Circle circle = new Circle();
+            return circle;
+        }else if(type.equals("Square")){
+            Square square = new Square();
+            return square;
+        }
         return null;
     }
 }
